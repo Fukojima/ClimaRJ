@@ -12,6 +12,6 @@ export class ApirequestService {
 
   url = "https://api.hgbrasil.com/weather/?format=json-cors&key=development&woeid=455827";
   get(){
-      return this.http.get(this.url).toPromise().then(data => {console.log("data", data)});
+      return this.http.get<any>(this.url);
   }
 }

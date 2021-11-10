@@ -1,19 +1,37 @@
 <div class="toolbar" role="banner">
   <img
     width="40"
-    alt="Angular Logo"
     src="../assets/icons/weather.png"
   />
   <span>ClimaRJ</span>
 </div>
 
-<div class="content" role="main">
+<div class="content" >
   <h2>Olá, bem vindo</h2>
-  <p>O ClimaRJ é uma aplicação desenvolvida com o objetivo de divulgar a
-    temperatura e a velocidade do vento (em km/h) da cidade do Rio de Janeiro.</p>
+  <p>O ClimaRJ é uma aplicação desenvolvida com o objetivo de divulgar em tempo real a
+    temperatura e a velocidade do vento (km/h) da cidade do Rio de Janeiro.</p>
+    <p>As informações foram obtidas através da  <a href="https://hgbrasil.com/status/weather" target="_blank">API HGBrasil</a> </p>
+
+</div>
+<div>
+  <mat-card class="card">
+    <mat-card-header >
+      <div mat-card-avatar class="wind-image"></div>
+      <mat-card-title>Velocidade do vento</mat-card-title>
+      <mat-card-subtitle> {{wind_speedy}} </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-header >
+      <div mat-card-avatar class="temp-image"></div>
+      <mat-card-title>Temperatura</mat-card-title>
+      <mat-card-subtitle> {{temp}}  °C</mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
 
 </div>
 
+<div class="content">
+<p> Para ter acesso ao código acesse o Github </p>
 
+</div>
 
 

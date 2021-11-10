@@ -1,3 +1,7 @@
+.body{
+
+color:#4d6175;
+}
 :host {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
@@ -46,9 +50,27 @@ p {
   align-items: center;
 }
 
+.card{
 
 
+}
 
+.card {
+  max-width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+}
+.wind-image {
+  background-image: url('../assets/icons/air.png');
+  background-size: cover;
 
+}
+.temp-image {
+  background-image: url('../assets/icons/cloudy.png');
+  background-size: cover;
 
+}
 

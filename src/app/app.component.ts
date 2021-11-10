@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ApirequestService } from './apirequest.service';
 
 @Component({
@@ -6,19 +6,30 @@ import { ApirequestService } from './apirequest.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
 
-  constructor(private apiService : ApirequestService){}
+   wind_speedy : string = "";
+   temp: string = "";
+
+
+  constructor(
+    public apiService : ApirequestService){}
 
   ngOnInit(){
 
-    this.getRequest();
+     this.getRequest();
+
   }
 
-
-
   getRequest(){
-    this.apiService.get();
+    this.apiService.get().subscribe(
+      data => {
+        console.log(data.results);
+         this.wind_speedy = data.results.wind_speedy;
+         this.temp = data.results.temp;
+      }
+    );
+
 
   }
 
